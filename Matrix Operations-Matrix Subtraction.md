@@ -23,35 +23,33 @@ To write a Python program that reads two matrices from the user and performs mat
 
 ## 💻 PROGRAM:
 ```
-def create_matrix(n, m):
-    print(f"Enter the elements of a {n}x{m} matrix:")
-    matrix = []
+def create_matrix(n,m):
+    M=[]
     for i in range(n):
-        row = list(map(int, input().split()))
-        matrix.append(row)
-    return matrix
+        row=[]
+        for j in range(m):
+            x=int(input())
+            row.append(x)
+        M.append(row)
+    return M 
+r,c=input().split()
+A=create_matrix(int(r),int(c))
+B=create_matrix(int(r),int(c))
+C=[]
+for i in range(int(r)):
+    R=[]
+    for j in range(int(c)):
+        item=A[i][j]-B[i][j]
+        R.append(item)
+    C.append(R)
+print(A)
+print(B)
+print(C)
 
-r = int(input("Enter number of rows: "))
-c = int(input("Enter number of columns: "))
-
-print("\nMatrix A:")
-A = create_matrix(r, c)
-
-print("\nMatrix B:")
-B = create_matrix(r, c)
-
-C = []
-for i in range(r):
-    row = [A[i][j] - B[i][j] for j in range(c)]
-    C.append(row)
-
-print("\nResult of Matrix A - Matrix B:")
-for row in C:
-    print(' '.join(map(str, row)))
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/be40dbd7-ea47-4cc3-8692-f4927e4c6082)
+![image](https://github.com/user-attachments/assets/943f5ec9-fe7d-4192-a1a6-53068ff5f454)
 
 ## RESULT:
 Thus,the program is executed successfully
