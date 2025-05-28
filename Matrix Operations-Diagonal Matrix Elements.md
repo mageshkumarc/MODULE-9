@@ -19,31 +19,27 @@ To write a Python program that prints only the diagonal elements of a given matr
 
 ## 🖥️ Program
 ```
-rows = int(input("Enter number of rows: "))
-cols = int(input("Enter number of columns: "))
-
-print("Enter the elements row by row:")
-matrix = []
+rows = int(input())
+columns = int(input())
+matrix = [[0]*columns for row in range(rows)]
 for i in range(rows):
-    row = list(map(int, input().split()))
-    matrix.append(row)
-
-print("\nFull matrix:")
-for row in matrix:
-    print(' '.join(map(str, row)))
-
-print("\nDiagonal elements:")
+    lines = list(map(int, input().split()))
+    for j in range(columns):
+        matrix[i][j] = lines[j]
+print(matrix)
 for i in range(rows):
-    for j in range(cols):
-        if i == j:
-            print(matrix[i][j], end=' ')
+    for j in range(columns):
+        if(i==j):
+            print(matrix[i][j],end=" ")
         else:
-            print(' ', end=' ')
+            print(' ',end=" ")
     print()
+
 ```
 
 ### Output:
-![image](https://github.com/user-attachments/assets/fe77b35f-8ed7-49a5-b018-cbb80bb2b697)
+![image](https://github.com/user-attachments/assets/16f04a89-73d9-4765-8eaf-71b57229519a)
+
 
 ## Result
 Thus,the program is executed successfully
