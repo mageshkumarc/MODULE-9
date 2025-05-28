@@ -21,22 +21,26 @@ To write a Python class-based program that generates all even numbers between 20
 
 ## 💻 PROGRAM:
 ```
-class Program:
-    def __init__(self):
-        self.a = 200
-        self.b = 2
-        self.c = 300
+class Generate:
+    def __init__(self, first,d,last):
+        self.first = first
+        self.d = d
+        self.last=last
+    def Ap_generate(self):
+        L=[i for i in range(self.first,self.last+1,self.d)]
+        return L
 
-    def display(self):
-        even_numbers = [i for i in range(self.a, self.c + 1, self.b) if i % 2 == 0]
-        print(even_numbers)
 
-p = Program()
-p.display()
+Series = Generate(200,2,301)
+
+print(Series.Ap_generate())
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/cdd2fba9-28a2-420c-97cc-0276522c8024)
+![image](https://github.com/user-attachments/assets/ef53065c-2b1a-48bc-b351-b28cfb16b88d)
+![image](https://github.com/user-attachments/assets/ad7f1b9d-ece9-492e-85e5-6556629c9b5f)
+![image](https://github.com/user-attachments/assets/383ee3da-e42c-435b-9a17-51e3d28d515e)
+
 
 ## RESULT:
 Thus,the program is executed successfully
